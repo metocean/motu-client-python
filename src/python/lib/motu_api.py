@@ -45,7 +45,7 @@ import utils_collection
 import stop_watch
 import logging
 
-from .. import __version__
+from motu import __version__
 
 # constant for authentication modes
 AUTHENTICATION_MODE_NONE  = 'none'
@@ -64,7 +64,7 @@ def get_client_version():
     
     The value is automatically set by the maven processing build, so don't 
     touch it unless you know what you are doing."""
-    return '.'.join(__version__)
+    return '.'.join(map(str, __version__))
 
 def get_client_artefact():
     """Return the artifact identifier (as a string) of this client.

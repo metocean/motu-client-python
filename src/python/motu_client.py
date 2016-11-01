@@ -255,7 +255,7 @@ def check_version():
 #===============================================================================
 # The Main function
 #===============================================================================
-if __name__ == '__main__':
+def main():
     check_version()
     start_time = datetime.datetime.now()
     
@@ -307,3 +307,5 @@ if __name__ == '__main__':
     finally:
         log.debug( "Elapsed time : %s", str(datetime.datetime.now() - start_time) )
 
+if __name__ == '__main__':
+  main()

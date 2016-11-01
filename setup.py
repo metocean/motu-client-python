@@ -21,6 +21,13 @@ if __name__ == '__main__':
           description = 'Download client for Mercator Ocean data',
           author='CLS (Collecte Localisation Satellites)',
           url='https://github.com/metocean/motu-client-python',
-          package_dir={'motu':'src/python'},
-          packages=['motu'],
+          package_dir={'motu':'src/python',
+                       'motu.lib': 'src/python/lib'},
+          package_data={'motu': ['etc/*']},
+          packages=['motu','motu.lib'],
+          entry_points={
+            'console_scripts': [
+                'motu = motu.motu_client:main',
+        ],
+    },
 )
